@@ -1,6 +1,6 @@
 {
   "name": "hypernova-svelte",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Svelte Bindings for Hypernova",
   "main": "lib/index.js",
   "author": "Felipe Guizar Diaz <felipegaiacharly@gmail.com>",
