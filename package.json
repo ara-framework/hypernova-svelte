@@ -1,0 +1,33 @@
+{
+  "name": "hypernova-svelte",
+  "version": "1.0.0",
+  "description": "Svelte Bindings for Hypernova",
+  "main": "lib/index.js",
+  "author": "Felipe Guizar Diaz <felipegaiacharly@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "svelte",
+    "hypernova",
+    "ssr",
+    "isomorphic"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:marconi1992/hypernova-svelte.git"
+  },
+  "scripts": {
+    "prepublish": "npm run build",
+    "lint": "eslint src",
+    "build": "babel src -d lib"
+  },
+  "peerDependencies": {
+    "hypernova": "^2.5.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-airbnb": "^2.5.3",
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  }
+}
