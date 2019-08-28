@@ -1,6 +1,22 @@
 import hypernova, { serialize, load } from 'hypernova';
+import { findNode, getData } from 'nova-helpers';
 
-export const something = {};
+const mountComponent = (Component, node, data) => {
+  return new Component({
+    target: node,
+    props: data,
+    hydrate: true,
+  });
+};
+
+export const renderInPlaceholder = (name, Component, id) => {
+  const node = findNode(name, id);
+  const data = getData(name, id);
+
+  if (node && data) {
+    mountComponent(Component, node, data);
+  }
+};
 
 export const renderSvelte = (name, Component) => hypernova({
   server() {
@@ -17,11 +33,7 @@ export const renderSvelte = (name, Component) => hypernova({
       payloads.forEach((payload) => {
         const { node, data: propsData } = payload;
 
-        return new Component({
-          target: node,
-          props: propsData,
-          hydrate: true,
-        });
+        return mountComponent(Component, node, propsData);
       });
     }
 
