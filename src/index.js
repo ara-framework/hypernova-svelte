@@ -1,13 +1,27 @@
 import hypernova, { serialize, load } from 'hypernova';
 import { findNode, getData } from 'nova-helpers';
 
-const mountComponent = (Component, node, data) => {
-  return new Component({
-    target: node,
-    props: data,
-    hydrate: true,
-  });
+export { load } from 'hypernova';
+
+export const loadById = (name, id) => {
+  const node = findNode(name, id);
+  const data = getData(name, id);
+
+  if (node && data) {
+    return {
+      node,
+      data,
+    };
+  }
+
+  return null;
 };
+
+export const mountComponent = (Component, node, data) => new Component({
+  target: node,
+  props: data,
+  hydrate: true,
+});
 
 export const renderInPlaceholder = (name, Component, id) => {
   const node = findNode(name, id);

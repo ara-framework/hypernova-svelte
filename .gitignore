@@ -1,22 +1,3 @@
-Skip to content
- 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@marconi1992 
-9
-0
-2 0 marconi1992/hypernova-vue
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Security  Insights  Settings
-hypernova-vue/.gitignore
-@marconi1992 marconi1992 First steps
-ee91b83 on Feb 20
-34 lines (25 sloc)  502 Bytes
-    
 # Logs
 logs
 *.log
@@ -51,17 +32,3 @@ lib
 npm-shrinkwrap.json
 yarn.lock
 package-lock.json
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-
-example
